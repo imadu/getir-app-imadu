@@ -15,6 +15,8 @@ class RecordsRepository {
             $and: [
               { $gte: [{ $sum: "$counts" }, options.minCount] },
               { $lte: [{ $sum: "$counts" }, options.maxCount] },
+              { $gte: ["$createdAt", options.startDate]},
+              {$lte: ["$createdAt", options.endDate]}
             ],
           },
         },
