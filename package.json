@@ -2,14 +2,16 @@
   "name": "getir-rest-project",
   "version": "1.0.0",
   "description": "getir test project",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "author": "Ikechukwu Madu <ikechukwu.madu1@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist/server",
+    "start": "node dist/server",
     "start:dev": "nodemon ./dist/server | bunyan",
     "build:tsc": "tsc -p ./tsconfig.json",
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
+    "prestart:prod": "rimraf dist && npm run build:tsc",
+    "postinstall": "npm run prestart:prod",
     "test": "rm -f logs.json && NODE_ENV=test && jest --runInBand"
   },
   "dependencies": {
