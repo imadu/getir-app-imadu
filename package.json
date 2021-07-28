@@ -12,7 +12,7 @@
     "watch:tsc": "tsc --watch -p ./tsconfig.json",
     "prestart:prod": "rimraf dist && npm run build:tsc",
     "postinstall": "npm run prestart:prod",
-    "test": "rm -f logs.json && NODE_ENV=test && jest --runInBand"
+    "test": "rm -f logs.json && NODE_ENV=test && jest --detectOpenHandles"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",

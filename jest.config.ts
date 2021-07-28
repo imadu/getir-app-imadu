@@ -6,7 +6,6 @@ module.exports = {
       '^.+\\.tsx?$': 'ts-jest'
     },
     testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
-    testPathIgnorePatterns: ['__tests__/factory', '__tests__/utils/'],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
       '^@app/common(.*)$': '<rootDir>/src/common$1',
