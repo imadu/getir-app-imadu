@@ -15,7 +15,6 @@ class RecordsRepository {
             $and: [
               { $gte: [{ $sum: "$counts" }, options.minCount] },
               { $lte: [{ $sum: "$counts" }, options.maxCount] },
-              { createdAt: { $gt: options.startDate, $lt: options.endDate } },
             ],
           },
         },
@@ -32,6 +31,7 @@ class RecordsRepository {
         });
         return data
     } catch (error) {
+        console.log(error)
       return error;
     }
   }

@@ -1,6 +1,7 @@
-import env from "@app/common/config/env"
+import env from "../common/config/env"
 import express from "express"
 import mongoose from "mongoose"
+import { appRoutes } from "./routes"
 
 
 export default  class App{
@@ -15,13 +16,9 @@ export default  class App{
     public configure  = () => {
         this.port = Number(env.port);
         this.db = env.mongodb_url;
-        const limiter = rateLimit({
-            windowMs: 60 * 60 * 1000,
-            max: 100
-        })
         this.app.use(express.urlencoded({ extended: false }));
         this.app.use(express.json());
-        this.app.use('/v1/',limiter, appRoutes);
+        this.app.use('/', appRoutes);
     }
 
     public start = () => {

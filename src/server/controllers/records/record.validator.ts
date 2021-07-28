@@ -1,8 +1,8 @@
 import joi from "joi";
 
 export const recordValidator = joi.object({
-  start_date: joi.date().required(),
-  end_date: joi.date().required(),
-  min_count: joi.number().required(),
-  max_count: joi.number().required(),
+  startDate: joi.date().required(),
+  endDate: joi.date().required(),
+  minCount: joi.number().required(),
+  maxCount: joi.number().required(),
 });

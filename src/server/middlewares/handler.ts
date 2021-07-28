@@ -6,7 +6,7 @@ class Handler {
     return res.status(statusCode).send({
       code: 0,
       msg: "success",
-      data: data,
+      records: data,
     });
   }
 
