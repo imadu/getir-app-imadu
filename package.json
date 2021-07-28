@@ -15,12 +15,13 @@
     "test": "rm -f logs.json && NODE_ENV=test && jest --runInBand"
   },
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "bcrypt": "^3.0.2",
     "bunyan": "^1.8.12",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "express-joi-validation": "^5.0.0",
+    "express-joi-validation": "^4.0.3",
     "express-request-id": "^1.4.1",
     "express-validator": "^6.12.1",
     "helmet": "^3.21.0",

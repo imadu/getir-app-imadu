@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import request from "supertest";
 import dotenv from "dotenv";
 import RecordsRepository from "src/data/records/record.repo";
 import { OptionsDTO } from "src/data/records/record.dto";
